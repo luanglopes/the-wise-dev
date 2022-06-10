@@ -1,0 +1,19 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["prettier", "simple-import-sort"],
+  "overrides": [
+    {
+      "files": ["**/**/*.spec.ts"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
+      "rules": { "jest/prefer-expect-assertions": "off" }
+    }
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-unused-vars": "error"
+  }
+}
